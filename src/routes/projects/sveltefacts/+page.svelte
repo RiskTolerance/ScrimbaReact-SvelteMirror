@@ -10,7 +10,7 @@
 		class="w-1/2 min-w-[550px] max-w-[770px] flex relative flex-col overflow-clip rounded-lg shadow-2xl"
 	>
 		<div
-			class="flex p-8 justify-between items-center h-1/6 bg-neutral-950 border-b-4 border-sopd border-svelte-orange"
+			class="flex p-8 justify-between items-center h-1/6 bg-neutral-950 border-b-4 border-svelte-orange"
 		>
 			<div class="flex items-center space-x-3 text-2xl font-bold">
 				<div class="h-14 w-14">

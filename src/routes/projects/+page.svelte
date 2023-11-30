@@ -1,17 +1,41 @@
 <script lang="ts">
+	import ProjectListItem from '$lib/components/ProjectListItem.svelte';
+
 	import { mainH } from '$lib/store';
+
+	type Project = {
+		name: string;
+		localUrl: string;
+		externalUrl: string;
+	};
+
+	type projectsArray = Array<Project>;
+
+	const projectsArr: projectsArray = [
+		{
+			name: 'Svelte Facts',
+			localUrl: '/projects/sveltefacts',
+			externalUrl: 'https://neon-halva-1de55e.netlify.app/projects/reactfacts'
+		},
+		{
+			name: 'airbnb Clone',
+			localUrl: '/projects/airbnbclone',
+			externalUrl: 'www.google.com'
+		}
+	];
 </script>
 
 <div style="height: {$mainH}px;" class="flex flex-col w-full items-center justify-center">
 	<div class="w-1/4 text-white flex flex-col space-y-6 mt-8">
 		<h1>This is a list of links to the projects I have completed or am currently working on:</h1>
 		<ul class="text-xl">
-			<li class="flex space-x-1">
-				<a class="text-svelte-orange" href="/projects/sveltefacts">Svelte Facts</a>
-				<a class="text-react-blue" href="https://neon-halva-1de55e.netlify.app/projects/reactfacts"
-					>(Next Version)</a
-				>
-			</li>
+			{#each projectsArr as project}
+				<ProjectListItem
+					name={project.name}
+					localUrl={project.localUrl}
+					externalUrl={project.externalUrl}
+				/>
+			{/each}
 		</ul>
 	</div>
 </div>
