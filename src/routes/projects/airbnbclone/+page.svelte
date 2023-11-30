@@ -66,7 +66,7 @@
 <Mirror url="https://www.google.com" />
 <div class="w-full my-12 flex justify-center items-center">
 	<div
-		class="w-1/2 min-w-[350px] max-w-[770px] flex relative flex-col overflow-clip rounded-lg shadow-2xl bg-white"
+		class="w-1/2 min-w-[350px] max-w-[700px] flex relative flex-col overflow-clip rounded-lg shadow-2xl bg-white"
 	>
 		<!-- header -->
 		<div class="flex px-10 w-full shadow-lg">
@@ -81,14 +81,14 @@
 			<AirbnbHeroImageSingle height={35} img={img8} />
 		</div>
 		<!-- hero text -->
-		<div class="flex flex-col justify-center w-full px-20 py-5 space-y-8">
-			<h1 class="text-3xl md:text-5xl font-semibold">Online Experiences</h1>
-			<p class="w-5/6 font-medium text-base md:text-lg">
+		<div class="flex flex-col w-full mx-10 lg:px-20 py-5 space-y-8">
+			<h1 class="text-2xl md:text-3xl lg:text-5xl font-semibold">Online Experiences</h1>
+			<p class="w-5/6 font-medium text-sm md:text-base lg:text-lg">
 				Join unique interactive activities led by one-of-a-kind hosts—all without leaving home.
 			</p>
 		</div>
 		<!-- travel cards -->
-		<div class="scroll flex overflow-x-scroll space-x-4 px-4 py-5 my-10">
+		<div class="scroll flex w-full overflow-x-scroll space-x-4 px-4 py-5 my-10">
 			{#each cardData as card}
 				<AirbnbDestinationCard {card} />
 			{/each}
@@ -101,16 +101,26 @@
 
 <style>
 	/* Chrome */
-	.scroll::-webkit-scrollbar {
-		scrollbar-color: #ff5a5f white;
-		scrollbar-width: thin;
-		/* steal shadow from tailwind :D */
+	::-webkit-scrollbar {
+		height: 5px;
+		width: 12px;
+		background: white;
 		--tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 		--tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color),
 			0 4px 6px -4px var(--tw-shadow-color);
 		box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000),
 			var(--tw-shadow);
 	}
+
+	::-webkit-scrollbar-thumb {
+		background: #ff5a5f;
+		-webkit-border-radius: 1ex;
+	}
+
+	::-webkit-scrollbar-corner {
+		background: white;
+	}
+
 	/* Firefox */
 	.scroll {
 		scrollbar-color: #ff5a5f white;

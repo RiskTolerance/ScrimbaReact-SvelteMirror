@@ -6,9 +6,9 @@
 </script>
 
 <!-- card container -->
-<div class="tilt flex flex-col aspect-[3/5] h-[425px] overflow-clip rounded-md">
+<div class="tilt flex flex-col aspect-[3/5] h-[425px] rounded-md float-none">
 	<!-- img -->
-	<div class="w-full h-5/8 rounded-lg overflow-clip relative">
+	<div class="w-full h-[315px] rounded-lg overflow-clip relative">
 		{#if status.toLowerCase() === 'sold out'}
 			<div
 				class="pop absolute top-3 left-3 bg-white rounded-md px-2 py-1 flex justify-center items-center"
@@ -17,12 +17,10 @@
 			</div>
 		{/if}
 
-		<div class="h-[315px] w-full">
-			<img class="h-full min-w-full object-cover" src={imgUrl} alt="" />
-		</div>
+		<img class="min-w-full h-[315px] object-cover" src={imgUrl} alt="" />
 	</div>
 	<!-- info -->
-	<div class="flex relative flex-col space-y-2 my-2 h-full">
+	<div class="flex relative flex-col space-y-2 my-2 h-[110px]">
 		<div class="flex space-x-2 h-1/4 items-center">
 			<span class="h-full w-5 mr-1">
 				<img src={star} alt="star icon" />
