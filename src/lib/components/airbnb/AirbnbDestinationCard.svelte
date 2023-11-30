@@ -9,11 +9,14 @@
 <div class="tilt flex flex-col aspect-[3/5] h-[425px] overflow-clip rounded-md">
 	<!-- img -->
 	<div class="w-full h-5/8 rounded-lg overflow-clip relative">
-		<div
-			class="pop absolute top-3 left-3 bg-white rounded-md px-2 py-1 flex justify-center items-center"
-		>
-			<h1>{status}</h1>
-		</div>
+		{#if status.toLowerCase() === 'sold out'}
+			<div
+				class="pop absolute top-3 left-3 bg-white rounded-md px-2 py-1 flex justify-center items-center"
+			>
+				<h1>{status.toUpperCase()}</h1>
+			</div>
+		{/if}
+
 		<div class="h-[315px] w-full">
 			<img class="h-full min-w-full object-cover" src={imgUrl} alt="" />
 		</div>
@@ -39,14 +42,3 @@
 		</p>
 	</div>
 </div>
-
-<style>
-	.tilt {
-		transform-style: preserve-3d;
-		transform: perspective(1000px);
-	}
-
-	.pop {
-		transform: translateZ(20px);
-	}
-</style>
