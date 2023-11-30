@@ -66,7 +66,7 @@
 <Mirror url="https://www.google.com" />
 <div class="w-full my-12 flex justify-center items-center">
 	<div
-		class="w-1/2 min-w-[550px] max-w-[770px] flex relative flex-col overflow-clip rounded-lg shadow-2xl bg-white"
+		class="w-1/2 min-w-[350px] max-w-[770px] flex relative flex-col overflow-clip rounded-lg shadow-2xl bg-white"
 	>
 		<!-- header -->
 		<div class="flex px-10 w-full shadow-lg">
@@ -82,8 +82,8 @@
 		</div>
 		<!-- hero text -->
 		<div class="flex flex-col justify-center w-full px-20 py-5 space-y-8">
-			<h1 class="text-5xl font-semibold">Online Experiences</h1>
-			<p class="w-5/6 font-medium text-lg">
+			<h1 class="text-3xl md:text-5xl font-semibold">Online Experiences</h1>
+			<p class="w-5/6 font-medium text-base md:text-lg">
 				Join unique interactive activities led by one-of-a-kind hosts—all without leaving home.
 			</p>
 		</div>
