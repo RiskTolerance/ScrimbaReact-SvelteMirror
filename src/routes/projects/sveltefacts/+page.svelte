@@ -4,7 +4,7 @@
 	import { mainH } from '$lib/store';
 </script>
 
-<Mirror url="https://neon-halva-1de55e.netlify.app/projects/reactfacts" />
+<Mirror url="https://next-sveltekit-mirror.netlify.app/projects/reactfacts" />
 <div style="height: {$mainH}px;" class="w-full flex justify-center items-center text-white">
 	<div
 		class="w-1/2 min-w-[550px] max-w-[770px] flex relative flex-col overflow-clip rounded-lg shadow-2xl"

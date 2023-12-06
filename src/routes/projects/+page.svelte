@@ -20,7 +20,7 @@
 		{
 			name: 'airbnb Clone',
 			localUrl: '/projects/airbnbclone',
-			externalUrl: 'www.google.com'
+			externalUrl: 'https://next-sveltekit-mirror.netlify.app/projects/airbnbclone'
 		}
 	];
 </script>
