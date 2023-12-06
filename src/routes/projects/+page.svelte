@@ -15,7 +15,7 @@
 		{
 			name: 'Svelte Facts',
 			localUrl: '/projects/sveltefacts',
-			externalUrl: 'https://neon-halva-1de55e.netlify.app/projects/reactfacts'
+			externalUrl: 'https://next-sveltekit-mirror.netlify.app/projects/reactfacts'
 		},
 		{
 			name: 'airbnb Clone',
