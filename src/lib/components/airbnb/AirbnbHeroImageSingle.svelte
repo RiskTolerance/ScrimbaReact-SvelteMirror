@@ -1,5 +1,6 @@
 <script lang="ts">
 	export let img: string;
+	export let imgDesc: string = 'description for image';
 	export let height: number;
 </script>
 
@@ -8,7 +9,7 @@
 		<img
 			class="h-full min-w-full absolute left-1/2 transform -translate-x-1/2 object-cover"
 			src={img}
-			alt=""
+			alt={imgDesc}
 		/>
 	</div>
 </div>
