@@ -40,10 +40,10 @@
 	];
 </script>
 
-<div style="height: {$mainH}px;" class="flex flex-col w-full items-center justify-center">
-	<div class="w-1/4 text-white flex flex-col space-y-6 mt-8">
+<div style="min-height: {$mainH}px;" class="flex flex-col w-full items-center justify-center">
+	<div class="max-w-1/4 px-20 text-white flex flex-col space-y-6 mt-8">
 		<h1>This is a list of links to the projects I have completed or am currently working on:</h1>
-		<ul class="text-xl space-y-2">
+		<ul class="text-xs sm:text-base md:text-xl space-y-2">
 			{#each projectsArr as project}
 				{#if project.status}
 					<ProjectListItem {...project} />

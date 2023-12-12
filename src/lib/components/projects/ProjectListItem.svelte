@@ -4,11 +4,13 @@
 	export let externalUrl = '';
 </script>
 
-<li class="flex space-x-1 bg-neutral-950 p-5 rounded-md justify-between">
-	<div class="flex justify-start">
+<li
+	class="flex flex-col sm:flex-row bg-neutral-950 p-5 rounded-md items-center justify-center sm:justify-between"
+>
+	<div class="flex justify-center sm:justify-start mb-2 sm:mb-0">
 		<a class="text-svelte-orange" href={localUrl}>{name} (complete)</a>
 	</div>
-	<div class="w-1/3 flex justify-end">
+	<div class="flex justify-center sm:justify-end">
 		<a class="text-react-blue" href={externalUrl}>Next Version</a>
 	</div>
 </li>
