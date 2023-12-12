@@ -1,12 +1,13 @@
 <script lang="ts">
-	import ProjectListItem from '$lib/components/ProjectListItem.svelte';
-
+	import ProjectListItem from '$lib/components/projects/ProjectListItem.svelte';
+	import ProjectListItemDisabled from '$lib/components/projects/ProjectListItemDisabled.svelte';
 	import { mainH } from '$lib/store';
 
 	type Project = {
 		name: string;
 		localUrl: string;
 		externalUrl: string;
+		status: boolean;
 	};
 
 	type projectsArray = Array<Project>;
@@ -15,12 +16,26 @@
 		{
 			name: 'Svelte Facts',
 			localUrl: '/projects/sveltefacts',
-			externalUrl: 'https://next-sveltekit-mirror.netlify.app/projects/reactfacts'
+			externalUrl: 'https://next-sveltekit-mirror.netlify.app/projects/reactfacts',
+			status: true
 		},
 		{
 			name: 'airbnb Clone',
 			localUrl: '/projects/airbnbclone',
-			externalUrl: 'https://next-sveltekit-mirror.netlify.app/projects/airbnbclone'
+			externalUrl: 'https://next-sveltekit-mirror.netlify.app/projects/airbnbclone',
+			status: true
+		},
+		{
+			name: 'Meme Generator',
+			localUrl: '/projects/memegen',
+			externalUrl: 'https://www.google.com',
+			status: false
+		},
+		{
+			name: 'Notes App',
+			localUrl: '/projects/notesapp',
+			externalUrl: 'https://www.google.com',
+			status: false
 		}
 	];
 </script>
@@ -28,13 +43,13 @@
 <div style="height: {$mainH}px;" class="flex flex-col w-full items-center justify-center">
 	<div class="w-1/4 text-white flex flex-col space-y-6 mt-8">
 		<h1>This is a list of links to the projects I have completed or am currently working on:</h1>
-		<ul class="text-xl">
+		<ul class="text-xl space-y-2">
 			{#each projectsArr as project}
-				<ProjectListItem
-					name={project.name}
-					localUrl={project.localUrl}
-					externalUrl={project.externalUrl}
-				/>
+				{#if project.status}
+					<ProjectListItem {...project} />
+				{:else}
+					<ProjectListItemDisabled {...project} />
+				{/if}
 			{/each}
 		</ul>
 	</div>
