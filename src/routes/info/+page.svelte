@@ -2,8 +2,8 @@
 	import { mainH } from '$lib/store';
 </script>
 
-<div style="height: {$mainH}px;" class="flex flex-col w-full items-center justify-center">
-	<div class="w-1/2 text-white flex flex-col space-y-6 mt-8">
+<div style="min-height: {$mainH}px;" class="flex flex-col w-full items-center justify-center p-10">
+	<div class="w-full sm:w-3/4 text-white flex flex-col space-y-6">
 		<h1 class="font-bold text-4xl">Hello - welcome to the party! 🐢</h1>
 		<p>
 			This is my attempt to learn Next.js while becoming more proficiant with SvelteKit and
