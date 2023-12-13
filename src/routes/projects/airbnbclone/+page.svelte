@@ -18,9 +18,9 @@
 	import VanillaTilt from 'vanilla-tilt';
 	import { onMount } from 'svelte';
 
-	import type { cardData } from '$lib/types';
+	import type { CardData } from '$lib/types';
 
-	const cardData: cardData = [
+	const cardData: CardData = [
 		{
 			status: 'sold out',
 			rating: 4,
