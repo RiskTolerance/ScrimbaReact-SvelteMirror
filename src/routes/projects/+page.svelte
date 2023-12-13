@@ -28,8 +28,8 @@
 		{
 			name: 'Meme Generator',
 			localUrl: '/projects/memegen',
-			externalUrl: 'https://www.google.com',
-			status: false
+			externalUrl: 'https://next-sveltekit-mirror.netlify.app/projects/memegen',
+			status: true
 		},
 		{
 			name: 'Notes App',
