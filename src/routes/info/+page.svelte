@@ -27,7 +27,7 @@
 		<p>
 			Even <a
 				class="text-react-blue"
-				href="https://neon-halva-1de55e.netlify.app/info"
+				href="https://next-sveltekit-mirror.netlify.app/info"
 				target="_blank"
 				aria-label="link to Next js version">this page</a
 			> will be mirrored!
